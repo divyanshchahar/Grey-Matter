@@ -1,0 +1,310 @@
+\documentclass[twoside,12pt]{report}  % type of Documents
+
+
+%_____________________________________________PACKAGES___________________________________________
+\usepackage[utf8]{inputenc} 						% input encoding [utf8]
+\usepackage[english]{babel} 						% setting spell-check for English
+\usepackage{geometry} 								% for page margins
+\usepackage{fancyhdr} 								% for header and footer
+\usepackage{url} 									% package to include urls
+\usepackage{datetime} 								% For inserting date and time
+\usepackage{graphicx} 								% For inserting graphics
+\usepackage{float} 									% for accurate placement of figures and tables
+\usepackage[labelfont=bf,textfont=bf]{caption} 		% for having the captions in bold
+\usepackage{amsmath} 								%for equations
+\usepackage[hidelinks]{hyperref} 					% for adding hyperlinks (withouht ugly boxes)
+\usepackage{nomencl} 								% For Nomenclature 
+\makenomenclature
+\usepackage{amssymb} 								% symbols for nomenclature
+\usepackage{etoolbox} 								% For Creating Categories in Nomenclature
+\usepackage{caption} 								% For subfigures
+\usepackage{subcaption} 							% For subfigures
+\usepackage[compact]{titlesec} 						% For Headings
+\usepackage{tcolorbox}								% For boxed text
+
+%________________________________________________________________________________________________
+
+
+% PAGE GEOMETRY
+\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm,includeheadfoot}
+
+
+%_____________________________HEADER AND FOOTER_______________________
+
+\pagestyle{fancy}
+\fancyhf{} 
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%\chead{\includegraphics[width=2.5cm]{./images/headerlogo}}
+\lfoot{Divyansh Chahar}
+\rfoot{\thepage}
+
+%_____________________________________________________________________
+
+
+%____________________________________________NOMENCLATURE____________________________
+\renewcommand\nomgroup[1]{%
+	\ifstrequal{#1}{A}{\item[\Large\bfseries{Greek Characters}]}{%
+	\ifstrequal{#1}{B}{\vspace{10pt} \item[\Large\bfseries{Roman Characters}]}{%
+	\ifstrequal{#1}{C}{\vspace{10pt} \item[\Large\bfseries{Acronyms}]}{}}}%
+}
+%____________________________________________________________________________________
+
+%_________________CHAPTER________________
+\titleformat{\chapter}[hang]
+{\bfseries\huge\sc}
+{\arabic{chapter}\hspace{0.3cm}$\vert$}
+{0.3cm}
+{\Huge}
+
+\titlespacing{\chapter}{0cm}{0cm}{1cm}
+%________________________________________
+
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}} % to include section numbers in figures
+
+%%%%%%%%%%%%%%%%%%
+%%% TITLE PAGE %%%
+%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\begin{titlepage}
+		\newgeometry{a4paper,top=3cm,bottom=1cm,right=3cm,left=3cm} % Setting Page Dimensions
+		\begin{center}
+			{\LARGE \textbf{PROJECT - Grey Matter}}\\
+			
+			\hrulefill
+		
+			\textbf{A collection of Notes}
+			
+			\null
+			
+			Divyansh Chahar
+			
+			\vfill
+			
+			\href{https://www.linkedin.com/in/divyanshchahar/}{\includegraphics[width=0.25\linewidth]{./images/icons/my_qrcode.eps}}
+		
+			\null
+		
+			\href{https://www.linkedin.com/in/divyanshchahar/}{\includegraphics[width=0.025\linewidth]{./images/icons/linkedin_logo.eps}}
+			\href{https://www.linkedin.com/in/divyanshchahar/}{https://www.linkedin.com/in/divyanshchahar/}
+			
+			\null
+			
+			\href{https://www.linkedin.com/in/divyanshchahar/}{\includegraphics[width=0.025\linewidth]{./images/icons/github_mark.eps}}
+			\href{https://github.com/divyanshchahar}{https://github.com/divyanshchahar}
+			
+			\vfill
+			
+			\today
+			
+		\end{center}
+	\end{titlepage}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%	NOMENCLATURE	%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\printnomenclature
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%% MAIN CONTENT	%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+
+\chapter{Introduction to Statistics and Measures used in Descriptive Statistics}
+\section{Measure of Central Tendency}
+\noindent
+\subsection{Mean}
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black, title= \textbf{Mean}]
+	\textbf{Mean is simply the average of the data}. 
+\end{tcolorbox}
+\noindent
+\\
+It can be mathematically expressed as follows
+
+$$\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i$$
+%
+\subsection{Median}
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black, title= \textbf{Median}]
+	\textbf{Median is the central value of the data when the values are arranged in increasing or decreasing order}
+\end{tcolorbox}
+\noindent
+\\
+It can be mathematically expressed as
+$$\widetilde{x} = \left\{
+				   		\begin{array}{ll}
+				   			x_{(n+1)/2}, \mbox{if n is odd}                                      \\
+				   			\frac{1}{2}\left(x_{(n)/2} + x_{(n+1)/2}\right), \mbox{if n is even}
+				   		\end{array}	
+                    \right.
+$$
+\subsection{Mode}
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black, title= \textbf{Mode}]
+	\textbf{Mode is the most frequently occurring value in the dataset} 
+\end{tcolorbox}
+
+\section{Measure of Dispersion}
+If data points are represented on number line than measure of dispersion will be an indication of how far are data points from each other. 
+\subsection{Range}
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black, title= \textbf{Range}]
+	\textbf{It is the interval over which the data is spread. It is the difference between the highest and lowest value of the data} 
+\end{tcolorbox}
+\noindent
+\\
+It is mathematically expressed as
+$$ R = Max(x_{i}) - Min(x_{i})$$
+\subsection{Quartiles and Inter-Quartile Range}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!75!black, title=\textbf{Quartiles}]
+	\textbf{Quartiles divide the ordered dataset into 4 parts with equal members}
+\end{tcolorbox}
+\begin{itemize}
+	\item The \textbf{second quartile} or $\boldsymbol{Q_2}$ is the value at the middle position when the data is arranged in ascending order, it is also the \textbf{median value}.
+	\item The first quartile or $\boldsymbol{Q_1}$ divides the first half of the data into 2 parts, we can say that the \textbf{first quartile is the median of the first half of the data}.
+	\item Similarly the \textbf{third quartile} or $\boldsymbol{Q_3}$ is the \textbf{median of the second half of the data}.
+\end{itemize}
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black, title= \textbf{Interquartile Range}]
+	\textbf{Interquartile range is the differance between the median of the first and second half of the data, or we can say that inter quartile range is the differance between $Q_1$ and $Q_3$.}
+\end{tcolorbox}
+$$ IQR = Q_3 - Q_1 $$
+\subsection{Variance}
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black, title= \textbf{Variance}]
+	V\textbf{ariance is a measure of how far the data points are from the mean.}
+\end{tcolorbox}
+\noindent
+\\
+Variance is one of the methods of measuring how spread out the values are in a dataset. Variance can be mathematically calculated as
+$$ S^2 = \frac{\sum_{i=1}^{n} (x_i - \mu)^2 }{n-1} $$
+$$ \sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \bar{x})^2 }{N} $$
+Due to squaring of difference, the figure obtained could be pretty large and insignificant as the unit of measurement is squared.
+\subsection{Standard Deviation}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!75!black, title = \textbf{Standard Deviation}]
+	Standard Deviation is the square root of Variance
+\end{tcolorbox}
+\noindent
+\\
+Standard Deviation also measure the spread of data. Since the units are not squared in Standard Deviation and the values are not too large either, it is much more used than variance.
+Standard Deviation can be calculated as : 
+$$ S = \sqrt{S^2} = \sqrt{\frac{\sum_{i=1}^{n} ( x_i - \bar{x} )^2} {n - 1}} $$
+$$ \sigma = \sqrt{\sigma^2} = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2} {N}} $$
+\subsection{Coefficient of Variation or Relative Standard Deviation}
+Standard Deviation is the most common measure of the variability of a single data-set. However when we want to compare the standard deviation of two or more data-sets the issue becomes a little more complicated, we need a relative measure such as Coefficient of Variation.
+To better understand the concept of Variance, Standard Deviation and Coefficient of Variance, let us consider the following example. 
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title = \textbf{Example}]
+	Lets us consider stock price of a random company over a week. Let us consider two investors, one from U.S.A. and another one from India. although the price of Stock is same but the Indian Investor has to pay in Indian Rupee at an exchange rate of 73.51 INR per USD. 
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabular} {c|cc}
+				&USD	    &INR \\ 
+				\hline
+				\textbf{Day 1}		                    &514.79		&37842.213	\\ 
+				\textbf{Day 2}		                    &498.79		&36666.053  \\
+				\textbf{Day 3}		                    &504.72		&37101.968	\\
+				\textbf{Day 4}		                    &508.57		&37384.981	\\
+				\textbf{Day 5}		                    &504.05		&37052.7155	\\
+				\hline 
+				\textbf{Mean}		                    &506.184	&37209.586	\\
+				\textbf{Variance}		                &28.225		&152519.7	\\
+				\textbf{Standard Deviation}		        &5.313		&390.538	\\
+			\end{tabular}
+		\end{center}
+	\end{table}	
+	\begin{itemize}
+		\item Mean, variance and standard deviation for USD are \textbf{506.184 USD}, \textbf{28.225} $\boldsymbol{USD^2}$ and \textbf{5.313 USD} respectively.
+		\item Mean, variance and standard deviation for INR are \textbf{37209.586 INR}, \textbf{152519.7} $\boldsymbol{INR^2}$ and \textbf{390.538 INR} respectively. 
+	\end{itemize}
+\end{tcolorbox}
+\noindent
+\\
+From the above data we can observe:
+\begin{itemize}
+	\item Variance values are comparatively larger than Standard Deviation
+	\item Even though we have same variability for INR and USD values, Standard Deviation varies a lot. 
+\end{itemize}
+\noindent
+To compare the variability of two different datasets we use Cofficient of Variance which can be calculated as
+$$ C_v = \frac{\sigma}{\mu} $$
+$$ C_v = \frac{S}{\bar{x}} $$
+\\
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title = \textbf{Example}]
+	Let us calculate the cofficient of variance for the above data using the population formulae
+	\begin{itemize}
+		\item Cofficient of variance for USD is $ C_v = \frac{5.313}{506.184} = 0.010 $
+		\item Cofficient of variance for INR is $ C_v = \frac{390.538}{32709.586} = 0.010 $
+	\end{itemize}
+\end{tcolorbox}
+\noindent
+\section{Measure of Position}
+Measure of Position is the measure of the location of a data point in the population or sample.
+\\
+\noindent
+\subsection{Percentile}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!75!black, title = \textbf{Percentile}]
+	$N^{th}$ percentile will represent a datapoint which is larger than N percent of values in the dataset i.e. $99^th$ percentile represents a value which is greater than 99 percent of the values. Percentile divide the ordered data into 100 equal parts in terms of number of members.
+\end{tcolorbox}
+\noindent
+\\
+Rank of Percentile can be mathematically measured as
+$$ R_p = \frac{P}{100}N $$
+\noindent
+\\
+The above formulae works fine if $R_p$ is a positive integer. But the situation can become bit complicated if $R_p$ also has decimal value. 
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title = \textbf{Example}]
+	For example, let us consider a dataset with following values:
+	$P=35$, $N=90$. Therefore $R_p$ can be calculate as follows:
+	$$R_p = \frac{35}{90}200 = 31.5$$
+	As we can observe that 31.5 rank could be difficult to calculate. However this can be achieved as follows, Let us consider the $\boldsymbol{30^{th}}$ value is \textbf{60} and $\boldsymbol{31^{st}}$ value is \textbf{65}. Thus we will proceed as follows.
+	\begin{itemize}
+		\item \textbf{STEP 1:} Break the rank i.e. $R_p$ into integer and decimal part. In this case the integer part is 31 and decimal part is 0.5.
+		\item \textbf{STEP 2:} Find the Value at integer rank and integer rank + 1. In this case the values are 60 and 65 respectively
+		\item \textbf{STEP 3:} Calculate the difference between the value at integer rank and integer rank +1
+		$$65 - 60 = 5$$ 
+		\item \textbf{STEP 4:} Multiply the difference with the decimal part.
+		$$ 0.5 \times  5 = 2.5$$
+		\item \textbf{STEP 5:} Add the two values to get the final value
+		$$ 60 + 2.5 = 62.5 $$
+	\end{itemize}
+\end{tcolorbox}
+\noindent
+\\
+\subsection{Quartile}
+As Mentioned in the above section quartiles divide the dataset into 4 equal parts in terms of number of members.
+Rank of the three quartiles can be calculated as:
+$$ Q_1 = \frac{25}{100}N $$
+$$ Q_2 = \frac{50}{100}N $$
+$$ Q_3 = \frac{75}{100}N $$
+Second Quartile is the median of the dataset.
+\noindent
+\\
+\subsection{Standard Score}
+\begin{tcolorbox}[colback=red!5!white, colframe=red!75!black, title = \textbf{Example}]
+	Standard Score measure the differance between the datatpoints and the mean in terms of standard deviation
+\end{tcolorbox}
+\noindent
+\\
+It can be mathematically expressed as 
+$$ Z = \frac{x-\bar{x}}{\sigma} $$
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%	BIBLIOGRAPHY	%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%\bibliographystyle{ieeetr}
+%\bibliography{myrefrences}
+
+%%%%%%%%%%%%%%%%%%%
+%%%	APPENDIX	%%%
+%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thechapter}{\Alph{chapter}}
+\renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+\setcounter{figure}{0}
+
+
+\appendix
+
+\end{document}
