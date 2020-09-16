@@ -252,7 +252,6 @@ Measure of Position is the measure of the location of a data point in the popula
 Rank of Percentile can be mathematically measured as
 $$ R_p = \frac{P}{100}N $$
 \noindent
-\\
 The above formulae works fine if $R_p$ is a positive integer. But the situation can become bit complicated if $R_p$ also has decimal value. 
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title = \textbf{Example}]
 	For example, let us consider a dataset with following values:
@@ -273,23 +272,26 @@ The above formulae works fine if $R_p$ is a positive integer. But the situation 
 \noindent
 \\
 \subsection{Quartile}
-As Mentioned in the above section quartiles divide the dataset into 4 equal parts in terms of number of members.
-Rank of the three quartiles can be calculated as:
+As mentioned in the above section quartiles divide the dataset into 4 equal parts in terms of number of members. Rank of the three quartiles can be calculated as:
 $$ Q_1 = \frac{25}{100}N $$
 $$ Q_2 = \frac{50}{100}N $$
 $$ Q_3 = \frac{75}{100}N $$
-Second Quartile is the median of the dataset.
+\begin{itemize}
+	\item Second Quartile is the median of the dataset.
+	\item If the Rank of a quartile is a not a poitive integer, than it can be resolved as show in the example above.
+\end{itemize}
+
 \noindent
 \\
 \subsection{Standard Score}
-\begin{tcolorbox}[colback=red!5!white, colframe=red!75!black, title = \textbf{Example}]
+\begin{tcolorbox}[colback=red!5!white, colframe=red!75!black, title = \textbf{Standard Score}]
 	Standard Score measure the differance between the datatpoints and the mean in terms of standard deviation
 \end{tcolorbox}
 \noindent
 \\
 It can be mathematically expressed as 
 $$ Z = \frac{x-\bar{x}}{\sigma} $$
-%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
 %%%	BIBLIOGRAPHY	%%%
 %%%%%%%%%%%%%%%%%%%%%%%
 

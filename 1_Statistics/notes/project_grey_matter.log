@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.6)  14 SEP 2020 15:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.6)  15 SEP 2020 13:18
 entering extended mode
 **./project_grey_matter.tex
 (project_grey_matter.tex
@@ -935,24 +935,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--246
  []
 
 
-Underfull \vbox (badness 4217) has occurred while \output is active []
+Underfull \vbox (badness 5431) has occurred while \output is active []
 
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
+Underfull \hbox (badness 10000) in paragraph at lines 272--274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--284
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
 
  []
 
 [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 312.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 312.
  (project_grey_matter.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 312.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 312.
 Package rerunfilecheck Info: File `project_grey_matter.out' has not changed.
 (rerunfilecheck)             Checksum: FA070683951BF6461F7E05C527C412BD;1065.
  ) 
@@ -975,7 +975,7 @@ fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/
 Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on project_grey_matter.pdf (7 pages, 157295 bytes).
+Output written on project_grey_matter.pdf (7 pages, 157636 bytes).
 PDF statistics:
  168 PDF objects out of 1000 (max. 8388607)
  23 named destinations out of 1000 (max. 500000)
