@@ -13,7 +13,7 @@ Project Grey Matter was born out of Contributor's(Divyansh's) need to have one s
 Data Science notes
 
 
-How to navigate through "Project Grey-MAtter"?
+______________________________How to navigate through "Project Grey-MAtter"?_________________________________
 Every Topic has a dedicated folder, this folder is subdivided into two other folders as follows:
 -Notes: This folder Contains all the files for generaring the latex file and the notes in a file in PDF format
 -codes: This folder contains jupyter notebooks(demo codes in python) and required datasets
