@@ -1,6 +1,6 @@
 
 ________________________________________What is "Project Grey-Matter?______________________________________
-Project Grey - Matter, is a collection of high quality notes on various MAchine Learning and AI topics like
+Project Grey - Matter, is a collection of high quality notes on various Machine Learning and AI topics like
 - Statistics
 - Machine Learning
 - Model Boosting and PErformance Matrices
