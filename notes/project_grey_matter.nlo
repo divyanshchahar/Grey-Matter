@@ -1,0 +1,22 @@
+\nomenclatureentry{A$n$@[{$n$}]\begingroup number of members in samlpe dataset\nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{A$x_i$@[{$x_i$}]\begingroup memebr of dataset\nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{A$\bar{x}$@[{$\bar{x}$}]\begingroup sample mean\nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{B$\mu$@[{$\mu$}]\begingroup population mean\nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{A$N$@[{$N$}]\begingroup number of memers in the population\nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{A$\widetilde{x}$@[{$\widetilde{x}$}]\begingroup sample median\nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{A$R$@[{$R$}]\begingroup range\nomeqref {1.0}|nompageref}{3}
+\nomenclatureentry{A$IQR$@[{$IQR$}]\begingroup Interquartile Range\nomeqref {1.0}|nompageref}{3}
+\nomenclatureentry{A$Q_1$@[{$Q_1$}]\begingroup First Quartile\nomeqref {1.0}|nompageref}{3}
+\nomenclatureentry{A$Q_2$@[{$Q_2$}]\begingroup Second Quartile\nomeqref {1.0}|nompageref}{3}
+\nomenclatureentry{A$Q_3$@[{$Q_3$}]\begingroup Third Quartile\nomeqref {1.0}|nompageref}{3}
+\nomenclatureentry{A$S^2$@[{$S^2$}]\begingroup sample variance\nomeqref {1.0}|nompageref}{3}
+\nomenclatureentry{B$\sigma^2$@[{$\sigma^2$}]\begingroup population variance\nomeqref {1.0}|nompageref}{3}
+\nomenclatureentry{A$S$@[{$S$}]\begingroup Satndard Deviation of Sample\nomeqref {1.0}|nompageref}{4}
+\nomenclatureentry{B$\sigma$@[{$\sigma$}]\begingroup Standard DEviation of Population\nomeqref {1.0}|nompageref}{4}
+\nomenclatureentry{A$C_v$@[{$C_v$}]\begingroup Cofficient of variance/Relative Standard Deviation\nomeqref {1.0}|nompageref}{5}
+\nomenclatureentry{A$R_p$@[{$R_p$}]\begingroup Rank of Percentile\nomeqref {1.0}|nompageref}{5}
+\nomenclatureentry{A$w$@[{$w$}]\begingroup Percent of Values\nomeqref {1.0}|nompageref}{5}
+\nomenclatureentry{A$Z$@[{$Z$}]\begingroup Standard Score\nomeqref {1.0}|nompageref}{7}
+\nomenclatureentry{A$cov(x,y)$@[{$cov(x,y)$}]\begingroup covarince of x and y\nomeqref {2.0}|nompageref}{15}
+\nomenclatureentry{A$corr(x,y)$@[{$corr(x,y)$}]\begingroup Correlation between x and y\nomeqref {2.0}|nompageref}{15}
+\nomenclatureentry{A$P$@[{$P$}]\begingroup Probability\nomeqref {3.0}|nompageref}{19}

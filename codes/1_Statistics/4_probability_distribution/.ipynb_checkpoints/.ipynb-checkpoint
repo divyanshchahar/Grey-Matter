@@ -1,0 +1,164 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h1> <u> STATISTICS - CHAPTER-4 - DEMO-4 </u> </h1>\n",
+    "<h2> <u> Geometric Distribution </u> </h2>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let us consider that the probability of a basketball player making a successful free throw is 20 \\%. What is the probability that the first successful free throw will be after 10 failed trials ?\n",
+    "\n",
+    "We have\n",
+    "\n",
+    "$$ p = \\frac{20}{100} $$\n",
+    "\t$$ q = 1 - \\frac{20}{100} = \\frac{80}{100}$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h6> Importing Libraries </h6>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from scipy.stats import geom"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h3> 1. Calculating Probability Mass Function </h3>\n",
+    "$$ \\boxed{P(X = x) = (q)^{x-1}p} $$  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 10\n",
+    "p = 0.2\n",
+    "\n",
+    "r = geom.pmf(x, p, 0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The probability that first succes willl be after 10 failed attempts is 0.026843545600000015\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"The probability that first succes willl be after 10 failed attempts is\", r)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<h3> 2. Calculating Mean and Variance </h3>\n",
+    "$$ \\boxed{\\mu =  \\frac{1-p}{p}}$$\n",
+    "$$\\boxed{\\sigma^2 = \\frac{1-p}{p^2}}$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "p = 0.2\n",
+    "\n",
+    "m = geom.stats(p, loc=0, moments='m')\n",
+    "v = geom.stats(p, loc=0, moments='v')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The mean of the dstribution is  5.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"The mean of the dstribution is \", m)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The variance of the dstribution is  20.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"The variance of the dstribution is \", v)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<div class=\"alert alert-block alert-danger\">\n",
+    "    <b>note</b> : There is exist some discrepency in the value of mean computed using the geometric distribution functionality of scipy library and the value computed manually\n",
+    "</div>"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
